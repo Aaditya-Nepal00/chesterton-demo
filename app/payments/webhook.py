@@ -7,7 +7,7 @@ import httpx
 
 log = logging.getLogger(__name__)
 
-WEBHOOK_MAX_RETRIES = 3
+WEBHOOK_MAX_RETRIES = 5
 WEBHOOK_TIMEOUT_SECONDS = 15
 WEBHOOK_BACKOFF_SECONDS = 2
 
