@@ -39,7 +39,7 @@ def test_declined_card_is_402_and_replayed(api, provider):
 
 
 def test_provider_outage_is_502_and_not_stored(api, provider):
-    provider.fail_next = [503]
+    provider.fail_next = [503, 503, 503]
     assert api.post("/payments", json=BODY, headers=KEY).status_code == 502
     assert api.post("/payments", json=BODY, headers=KEY).status_code == 201
 

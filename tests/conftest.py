@@ -50,6 +50,11 @@ class FakeProvider:
         return httpx.Response(405)
 
 
+@pytest.fixture(autouse=True)
+def no_backoff_sleep(monkeypatch):
+    monkeypatch.setattr("app.payments.client.time.sleep", lambda s: None)
+
+
 @pytest.fixture
 def provider() -> FakeProvider:
     return FakeProvider()
