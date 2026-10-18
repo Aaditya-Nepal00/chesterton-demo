@@ -74,3 +74,4 @@ Why things are the way they are lives in [`decisions/`](decisions/). Chesterton 
 author of a merged PR about choices that have no written reason and records the answer
 there; a later PR that touches one of those lines gets the reason as a comment.
 Decisions are recorded by Chesterton.
+See the decisions folder for recorded decisions.
