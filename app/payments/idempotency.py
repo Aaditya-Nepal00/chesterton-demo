@@ -13,7 +13,7 @@ import time
 from collections.abc import Callable
 from dataclasses import dataclass
 
-IDEMPOTENCY_KEY_TTL_SECONDS = 72 * 60 * 60
+IDEMPOTENCY_KEY_TTL_SECONDS = 24 * 60 * 60
 
 
 class IdempotencyConflict(Exception):
